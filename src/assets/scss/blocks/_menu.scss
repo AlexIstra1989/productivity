@@ -1,0 +1,40 @@
+.menu {
+ background-color: $primaryColor;
+ padding: 25px 0;
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ &__list {
+  display: flex;
+ }
+ &__list-item {
+  &:not(:last-child) {
+   margin-right: 40px;
+  }
+ }
+ &__list-link {
+  font-family: "Quicksand";
+  font-weight: 500;
+ }
+ &__social {
+  display: flex;
+ }
+ &__social-list {
+  display: flex;
+  align-items: center;
+ }
+ &__social-item {
+  &:not(:last-child) {
+   margin-right: 35px;
+  }
+  &:last-child {
+   margin-right: 45px;
+  }
+ }
+ &__link {
+  background-color: #D2E1FF;;
+  padding: 13px 15px;
+ }
+}

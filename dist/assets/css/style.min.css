@@ -1,0 +1,125 @@
+.logo {
+  background-color: #5E81FE;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  margin-right: 70px; }
+
+a {
+  text-decoration: none;
+  outline: transparent;
+  cursor: pointer; }
+
+ul li {
+  list-style: none; }
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: transparent; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+ul,
+ol {
+  padding: 0; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+input,
+address,
+button,
+textarea,
+select {
+  font: inherit; }
+
+.menu {
+  background-color: #FFF;
+  padding: 25px 0; }
+  .menu__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .menu__list {
+    display: flex; }
+  .menu__list-item:not(:last-child) {
+    margin-right: 40px; }
+  .menu__list-link {
+    font-family: "Quicksand";
+    font-weight: 500; }
+  .menu__social {
+    display: flex; }
+  .menu__social-list {
+    display: flex;
+    align-items: center; }
+  .menu__social-item:not(:last-child) {
+    margin-right: 35px; }
+  .menu__social-item:last-child {
+    margin-right: 45px; }
+  .menu__link {
+    background-color: #D2E1FF;
+    padding: 13px 15px; }
+
+.hero {
+  background: url("../images/hero-bg.svg"), linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+  height: calc(100vh - 100px);
+  padding-top: 90px;
+  position: relative;
+  text-align: center; }
+  .hero__subtitle {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #3D4F9F;
+    margin-bottom: 16px; }
+  .hero__title {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #3D4F9F;
+    margin-bottom: 28px; }
+    .hero__title span {
+      font-weight: 500; }
+  .hero__text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #3D4F9F;
+    max-width: 475px;
+    margin: 0 auto; }
+  .hero__image-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+  .hero__image {
+    width: 100%; }
+
+/*# sourceMappingURL=style.min.css.map */

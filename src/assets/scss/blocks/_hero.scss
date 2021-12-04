@@ -1,0 +1,31 @@
+.hero {
+ background: url("../images/hero-bg.svg"), linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+ height: calc(100vh - 100px);
+ padding-top: 90px;
+ position: relative;
+ text-align: center;
+ &__subtitle {
+  @include text (10px, 500, 1.1, $accentColor);
+  margin-bottom: 16px;
+ }
+ &__title {
+  @include text (48px, 300, 1.2, $accentColor);
+  margin-bottom: 28px;
+   span{
+    font-weight: 500;
+   }
+ }
+ &__text {
+  @include text (15px, 400, 1.9, $accentColor);
+  max-width: 475px;
+  margin: 0 auto;
+ }
+ &__image-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+ }
+ &__image {
+  width: 100%;
+ }
+}
