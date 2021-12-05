@@ -99,12 +99,14 @@ select {
     font-weight: 500;
     line-height: 1.1;
     color: #3D4F9F;
+    font-family: "Roboto";
     margin-bottom: 16px; }
   .hero__title {
     font-size: 48px;
     font-weight: 300;
     line-height: 1.2;
     color: #3D4F9F;
+    font-family: "Quicksand";
     margin-bottom: 28px; }
     .hero__title span {
       font-weight: 500; }
@@ -113,6 +115,7 @@ select {
     font-weight: 400;
     line-height: 1.9;
     color: #3D4F9F;
+    font-family: "Roboto";
     max-width: 475px;
     margin: 0 auto; }
   .hero__image-box {
@@ -121,5 +124,51 @@ select {
     width: 100%; }
   .hero__image {
     width: 100%; }
+
+.customers {
+  background-color: #FFF;
+  padding: 60px 0; }
+  .customers__list {
+    display: flex;
+    justify-content: center; }
+  .customers__item:not(:last-child) {
+    margin-right: 85px; }
+
+.manage {
+  padding: 170px 0; }
+  .manage__inner {
+    display: flex; }
+  .manage__subtitle {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #3D4F9F;
+    font-family: "Roboto";
+    margin-bottom: 27px; }
+  .manage__title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3D4F9F;
+    margin-bottom: 28px; }
+    .manage__title span {
+      font-weight: 300; }
+  .manage__text {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #3D4F9F;
+    margin-bottom: 47px;
+    max-width: 410px;
+    margin-bottom: 45px; }
+  .manage__btn {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFF; }
+    .manage__btn::after {
+      content: "";
+      display: block;
+      position: absolute; }
 
 /*# sourceMappingURL=style.min.css.map */

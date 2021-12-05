@@ -6,10 +6,12 @@
  text-align: center;
  &__subtitle {
   @include text (10px, 500, 1.1, $accentColor);
+  font-family: "Roboto";
   margin-bottom: 16px;
  }
  &__title {
   @include text (48px, 300, 1.2, $accentColor);
+  font-family: "Quicksand";
   margin-bottom: 28px;
    span{
     font-weight: 500;
@@ -17,6 +19,7 @@
  }
  &__text {
   @include text (15px, 400, 1.9, $accentColor);
+  font-family: "Roboto";
   max-width: 475px;
   margin: 0 auto;
  }

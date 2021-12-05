@@ -127,4 +127,51 @@ select {
 .hero {
     background: url("../images/hero-bg.svg"), linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
     height: calc(100vh - 100px);
+    padding-top: 90px;
+    position: relative;
+    text-align: center;
+}
+
+.hero__subtitle {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #3D4F9F;
+    margin-bottom: 16px;
+}
+
+.hero__title {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #3D4F9F;
+    margin-bottom: 28px;
+}
+
+.hero__title span {
+    font-weight: 500;
+}
+
+.hero__text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.9;
+    color: #3D4F9F;
+    max-width: 475px;
+    margin: 0 auto;
+}
+
+.hero__image-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.hero__image {
+    width: 100%;
+}
+
+.customers {
+    background-color: #FFF;
+    padding: 60px 0;
 }

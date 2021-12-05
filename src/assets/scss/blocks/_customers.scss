@@ -1,0 +1,13 @@
+.customers {
+ background-color: $primaryColor;
+ padding: 60px 0;
+ &__list {
+  display: flex;
+  justify-content: center;
+ }
+ &__item {
+  &:not(:last-child) {
+   margin-right: 85px;
+  }
+ }
+}

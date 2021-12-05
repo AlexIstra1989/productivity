@@ -1,0 +1,30 @@
+.manage {
+ padding: 170px 0;
+ &__inner {
+  display: flex;
+ }
+ &__subtitle {
+  @include text (10px, 500, 1.1, $accentColor);
+  font-family: "Roboto";
+  margin-bottom: 27px;
+ }
+ &__title {
+  @include text (36px, 500, 1.2, $accentColor);
+  margin-bottom: 28px;
+  span {
+   font-weight: 300;
+  }
+ }
+ &__text {
+  @include text (28px, 400, 1.8, $accentColor);
+  margin-bottom: 47px;
+  max-width: 410px;
+  margin-bottom: 45px;
+ }
+ &__btn {
+  @include text (13px, 700, 1.2, $primaryColor);
+  &::after {
+   @include pseudo;
+  }
+ }
+}
