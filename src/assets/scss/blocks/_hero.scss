@@ -18,7 +18,7 @@
    }
  }
  &__text {
-  @include text (15px, 400, 1.9, $accentColor);
+  @include text (15px, 400, 1.9, $textColor);
   font-family: "Roboto";
   max-width: 475px;
   margin: 0 auto;

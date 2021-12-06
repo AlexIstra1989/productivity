@@ -85,8 +85,14 @@ select {
   .menu__social-item:last-child {
     margin-right: 45px; }
   .menu__link {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #3A79FF;
+    font-family: "Quicksand";
     background-color: #D2E1FF;
-    padding: 13px 15px; }
+    padding: 13px 15px;
+    border-radius: 2px; }
 
 .hero {
   background: url("../images/hero-bg.svg"), linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
@@ -114,7 +120,7 @@ select {
     font-size: 15px;
     font-weight: 400;
     line-height: 1.9;
-    color: #3D4F9F;
+    color: #8D96BD;
     font-family: "Roboto";
     max-width: 475px;
     margin: 0 auto; }
@@ -154,21 +160,53 @@ select {
     .manage__title span {
       font-weight: 300; }
   .manage__text {
-    font-size: 28px;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 1.9;
     color: #3D4F9F;
     margin-bottom: 47px;
-    max-width: 410px;
+    max-width: 387px;
+    width: 100%;
     margin-bottom: 45px; }
   .manage__btn {
     font-size: 13px;
     font-weight: 700;
     line-height: 1.2;
-    color: #FFF; }
-    .manage__btn::after {
+    color: #FFF;
+    background-color: #4C85FF;
+    position: relative;
+    padding: 13px 0;
+    width: 130px; }
+    bor
+.manage__btn::after {
       content: "";
       display: block;
-      position: absolute; }
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url("../images/icons/play.svg");
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      right: 15px;
+      bottom: 15px; }
+  .manage__btn--transparent::after {
+    display: none; }
+  .manage__box-image {
+    position: relative;
+    max-width: 600px;
+    width: 100%; }
+  .manage__image {
+    position: absolute; }
+    .manage__image:first-child {
+      top: 0;
+      left: 0; }
+    .manage__image:nth-child(2) {
+      top: 0;
+      left: 0; }
+    .manage__image:last-child {
+      top: 0;
+      left: 0; }
 
 /*# sourceMappingURL=style.min.css.map */

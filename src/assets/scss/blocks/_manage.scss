@@ -16,15 +16,52 @@
   }
  }
  &__text {
-  @include text (28px, 400, 1.8, $accentColor);
+  @include text (15px, 400, 1.9, $accentColor);
   margin-bottom: 47px;
-  max-width: 410px;
+  max-width: 387px;
+  width: 100%;
   margin-bottom: 45px;
  }
  &__btn {
   @include text (13px, 700, 1.2, $primaryColor);
+  background-color: #4C85FF;
+  position: relative;
+  padding: 13px 0;
+  width: 130px;
+  bor
   &::after {
    @include pseudo;
+   @include background (url("../images/icons/play.svg"));
+   position: absolute;
+   width: 7px;
+   height: 7px;
+   right: 15px;
+   bottom: 15px;
+  }
+ }
+ &__btn--transparent {
+  &::after {
+   display: none;
+  }
+ }
+ &__box-image {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+ }
+ &__image {
+  position: absolute;
+  &:first-child {
+   top: 0;
+   left: 0;
+  }
+  &:nth-child(2) {
+   top: 0;
+   left: 0;
+  }
+  &:last-child {
+   top: 0;
+   left: 0;
   }
  }
 }

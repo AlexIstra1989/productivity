@@ -34,7 +34,10 @@
   }
  }
  &__link {
-  background-color: #D2E1FF;;
+  @include text (13px, 700, 1.2, $buttonColor);
+  font-family: "Quicksand";
+  background-color: $buttonColorBg;
   padding: 13px 15px;
+  border-radius: 2px;
  }
 }
