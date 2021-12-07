@@ -120,8 +120,14 @@ select {
 }
 
 .menu__link {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #3A79FF;
+    font-family: "Quicksand";
     background-color: #D2E1FF;
     padding: 13px 15px;
+    border-radius: 2px;
 }
 
 .hero {
@@ -191,12 +197,19 @@ select {
 }
 
 .manage {
+    background-color: #F5F8FF;
     padding: 170px 0;
 }
 
 .manage__inner {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.manage__box {
+    padding-left: 180px;
 }
 
 .manage__subtitle {
@@ -221,11 +234,92 @@ select {
 }
 
 .manage__text {
-    font-size: 28px;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 1.8;
+    line-height: 1.9;
     color: #3D4F9F;
     margin-bottom: 47px;
-    max-width: 410px;
+    max-width: 387px;
+    width: 100%;
     margin-bottom: 45px;
+}
+
+.manage__btn {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFF;
+    background-color: #4C85FF;
+    position: relative;
+    padding: 13px 0;
+    width: 130px;
+    border-radius: 2px;
+}
+
+.manage__btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/icons/play.svg");
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.manage__btn--transparent {
+    background-color: #F5F8FF;
+    color: #ADB4D2;
+    margin-left: -7px;
+    border: 1px solid;
+    padding: 12px 0;
+}
+
+.manage__btn--transparent::after {
+    display: none;
+}
+
+.manage__box-image {
+    position: relative;
+    max-width: 650px;
+    width: 100%;
+}
+
+.manage__image {
+    position: absolute;
+}
+
+.manage__image:nth-child(1) {
+    top: 65px;
+    left: 5px;
+    z-index: 22;
+}
+
+.manage__image:nth-child(2) {
+    top: -20px;
+    left: -65px;
+}
+
+.manage__image:nth-child(3) {
+    top: 50px;
+    right: 15px;
+}
+
+.about {
+    padding: 170px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/about-bg.png");
+}
+
+.about__subtitle {
+    font-size: 10;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3D4F9F;
 }

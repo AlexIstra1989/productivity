@@ -1,0 +1,48 @@
+.about {
+ padding: 170px 0;
+ @include background (url("../images/about-bg.png"));
+ &__subtitle {
+  @include text (10px, 500, 1.2, $accentColor);
+  font-family: "Roboto";
+  margin-bottom: 24px;
+  text-align: center;
+ }
+ &__title {
+  @include text (24px, 500, 1.2, $accentColor);
+  font-family: "Quicksand";
+  margin-bottom: 90px;
+  text-align: center;
+ }
+ &__inner {
+  display: flex;
+  justify-content: center ;
+ }
+ &__item {
+  max-width: 135px;
+  width: 100%;
+  text-align: center;
+  &:not(:last-child) {
+   margin-right: 65px;
+  }
+ }
+ &__image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F1F5FF;
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+ }
+ &__item-title {
+  @include text (14px, 700, 1.7, $accentColor);
+  font-family: "Open Sans";
+  margin-bottom: 25px;
+ } 
+ &__item-text {
+  @include text (11px, 600, 1.7, $textColor);
+  font-family: "Open Sans";
+
+ }
+}
