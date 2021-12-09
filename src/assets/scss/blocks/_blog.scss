@@ -1,0 +1,18 @@
+.blog {
+ background-color: $backgroundColor;
+ padding: 105px 0;
+ &__subtitle {
+  @include text (10px, 500, 1.2, $accentColor);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  text-align: center;
+ }
+ &__title {
+  @include text (24px, 500, 1.2, $accentColor);
+  margin-bottom: 90px;
+  text-align: center;
+ }
+ &__inner {
+  display: grid;
+ }
+}

@@ -15,7 +15,8 @@
  }
  &__inner {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
+  margin-bottom: 90px;
  }
  &__item {
   max-width: 135px;
@@ -43,6 +44,40 @@
  &__item-text {
   @include text (11px, 600, 1.7, $textColor);
   font-family: "Open Sans";
-
+ }
+ &__buttons {
+  text-align: center;
+  span {
+   @include text (11px, 600, 1.7, #ADB3CB);
+   font-family: "Open Sans";
+   position: relative;
+   margin: 0 47px;
+   &::before,
+   &::after {
+    @include pseudo;
+    width: 15px;
+    border: 1px solid #DAE4FE;
+   }
+   &::before {
+    left: -35px;
+    top: 7px;
+   }
+   &::after {
+    left: 35px;
+    top: 7px;
+   }
+  }
+ }
+ &__btn {
+  font-family: "Quicksand";
+  padding: 13px 15px;
+ }
+ &__btn--red {
+  @include text (13px, 700, 1.2, #D43F3F);
+  background-color: #FFD7D7;
+ }
+ &__btn--blue {
+  @include text (13px, 700, 1.2, $buttonColor);
+  background-color: $buttonColorBg;
  }
 }
