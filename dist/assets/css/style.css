@@ -439,6 +439,10 @@ select {
     background-color: #D2E1FF;
 }
 
+.stats {
+    background-color: #FFF;
+}
+
 .stats__inner {
     display: -ms-flexbox;
     display: flex;
@@ -446,17 +450,14 @@ select {
     justify-content: space-between;
 }
 
-.stats__item {
+.stats__item--product {
+    background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-align: end;
     align-items: flex-end;
-}
-
-.stats__item--product {
-    background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
     padding: 155px 90px 75px 0;
     width: 100%;
     text-align: right;
@@ -464,8 +465,20 @@ select {
 
 .stats__item--users {
     background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
     width: 100%;
     padding: 155px 0 75px 90px;
+    text-align: left;
+}
+
+.stats__item--users h2,
+    .stats__item--users p {
+    color: #5E80FF;
 }
 
 .stats__result {
@@ -484,4 +497,68 @@ select {
     color: #FFF;
     font-family: "Quicksand";
     max-width: 232px;
+}
+
+.stats__result--product {
+    position: relative;
+}
+
+.stats__result--product::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/icons/product.svg");
+    width: 65px;
+    height: 65px;
+    left: 0;
+    bottom: 75px;
+}
+
+.stats__result--users {
+    position: relative;
+}
+
+.stats__result--users::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/icons/users.svg");
+    width: 71px;
+    height: 60px;
+    left: 0;
+    bottom: 80px;
+}
+
+.blog {
+    background-color: #F5F8FF;
+    padding: 105px 0;
+}
+
+.blog__subtitle {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3D4F9F;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blog__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3D4F9F;
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+.blog__inner {
+    display: grid;
 }
