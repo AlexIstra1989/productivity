@@ -1,0 +1,51 @@
+.testimonials {
+ background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+ padding: 110px 0;
+ &__inner {
+  display: flex;
+  justify-content: center;
+ }
+ &__box {
+  max-width: 334px;
+  width: 100%;
+  margin-right: 140px;
+ }
+ &__subtitle {
+  @include text (10px, 500, 1.2, $accentColor);
+  font-family: "Roboto";
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+ }
+ &__title {
+  @include text (36px, 500, 1.2, $accentColor);
+  font-family: "Quicksand";
+  margin-bottom: 14px;
+ }
+ &__text {
+  @include text (12px, 600, 1.9, #A4ABC8);
+  font-family: "Open Sans";
+ }
+ &__item {
+  background-color: $primaryColor;
+  max-width: 441px;
+  width: 100%;
+  padding: 40px 70px 50px;
+  border: 1px solid #D8E3FE;
+  box-shadow: 0px 5px 50px #F3F5FA;
+  position: relative;
+  &::after {
+   @include pseudo;
+   @include background (url("../images/user-photo.png"));
+   width: 62px;
+   height: 62px;
+   bottom: -30%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+  }
+ }
+ &__quote {
+  @include text (14px, 400, 1.7, #676F95);
+  font-family: "Roboto";
+  letter-spacing: 0.03em;
+ }
+}

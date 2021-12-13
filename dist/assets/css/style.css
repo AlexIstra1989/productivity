@@ -562,6 +562,9 @@ select {
 .blog__slider {
     background-color: #FFF;
     padding: 64px 35px;
+    max-width: 958px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .blog__grid {
@@ -580,6 +583,7 @@ select {
 .blog__image {
     -o-object-fit: cover;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .blog__image-box {
@@ -600,4 +604,108 @@ select {
 .blog__image--small {
     width: 127px;
     height: 127px;
+}
+
+.blog__content {
+    max-width: 385px;
+    width: 100%;
+}
+
+.blog__content-title {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #3D4F9F;
+    font-family: "Quicksand";
+    margin-bottom: 32px;
+}
+
+.blog__content-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #DFE2EF;
+    font-family: "Roboto";
+    max-width: 408px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.blog__link {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #3A79FF;
+    font-family: "Quicksand";
+    padding: 13px 15px;
+}
+
+.blog__link--blue {
+    background-color: #D2E1FF;
+    margin-right: 8px;
+}
+
+.blog__link--transparent {
+    color: #A6B6DA;
+}
+
+.testimonials {
+    background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
+    padding: 110px 0;
+}
+
+.testimonials__inner {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.testimonials__box {
+    max-width: 334px;
+    width: 100%;
+    margin-right: 140px;
+}
+
+.testimonials__subtitle {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3D4F9F;
+    font-family: "Roboto";
+    letter-spacing: 0.1em;
+    margin-bottom: 30px;
+}
+
+.testimonials__title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #3D4F9F;
+    font-family: "Quicksand";
+    margin-bottom: 14px;
+}
+
+.testimonials__text {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.9;
+    color: #A4ABC8;
+    font-family: "Open Sans";
+}
+
+.testimonials__item {
+    background-color: #FFF;
+    max-width: 441px;
+    width: 100%;
+    padding: 40px 70px 50px;
+}
+
+.testimonials__quote {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #676F95;
+    font-family: "Roboto";
+    letter-spacing: 0.03em;
 }
