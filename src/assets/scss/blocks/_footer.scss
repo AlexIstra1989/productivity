@@ -1,0 +1,12 @@
+.footer {
+ padding: 100px 0 90px;
+ background-color: $primaryColor;
+ border-top: 1px solid #D8E3FE;
+ &__copyright {
+  @include text (12px, 500, 1.2, #AEB8D0);
+  font-family: "Quicksand";
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  padding-left: 96px;
+ }
+}

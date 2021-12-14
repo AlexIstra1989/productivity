@@ -1,0 +1,42 @@
+.newsteller {
+ background-color: $primaryColor;
+ padding: 120px 0;
+ &__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ &__box {
+  max-width: 330px;
+  width: 100%;
+  margin-right: 80px;
+ }
+ &__title {
+  @include text (18px, 700, 1.2, $accentColor);
+  font-family: "Quicksand";
+  margin-bottom: 18px;
+ }
+ &__text {
+  @include text (14px, 400, 1.9, $textColor);
+  font-family: "Roboto";
+ }
+ &__field {
+  @include text (13px, 700, 1.2, #7A85AD);
+  font-family: "Quicksand";
+  background-color: #EFEFF7;
+  border-radius: 5px;
+  border: none;
+  padding: 21px 0 21px 23px;
+  width: 280px;
+  margin-right: 14px;
+ }
+ &__btn {
+  @include text (13px, 700, 1.2, $primaryColor);
+  font-family: "Quicksand";
+  background-color: #4D6CE1;
+  box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);  
+  border-radius: 5px;
+  padding: 21px 60px;
+ }
+
+}
