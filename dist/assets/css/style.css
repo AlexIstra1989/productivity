@@ -1,3 +1,9 @@
+.container {
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .logo {
     background-color: #5E81FE;
     width: 26px;
@@ -97,6 +103,12 @@ select {
 .menu__list-link {
     font-family: "Quicksand";
     font-weight: 500;
+    transition: color 0.5s ease, font-weight 0.5s ease;
+}
+
+.menu__list-link:hover {
+    color: #3D4F9F;
+    font-weight: 600;
 }
 
 .menu__social {
@@ -119,6 +131,57 @@ select {
     margin-right: 45px;
 }
 
+.menu__social-link path:hover {
+    fill: #3A79FF;
+}
+
+.menu__burger {
+    display: none;
+    width: 26px;
+    height: 26px;
+}
+
+.menu__burger--active .menu__line {
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.menu__burger--active .menu__line::before {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.menu__burger--active .menu__line::after {
+    opacity: 0;
+}
+
+.menu__line {
+    display: block;
+    background-color: #3D4F9F;
+    height: 2px;
+    position: relative;
+}
+
+.menu__line::before, .menu__line:after {
+    content: "";
+    display: block;
+    position: absolute;
+    position: absolute;
+    width: 26px;
+    height: 2px;
+    background-color: #3D4F9F;
+    left: 0;
+    top: 10px;
+}
+
+.menu__line:after {
+    top: -10px;
+}
+
 .menu__link {
     font-size: 13px;
     font-weight: 700;
@@ -130,10 +193,15 @@ select {
     border-radius: 2px;
 }
 
+.menu__link:hover {
+    background-color: #3D4F9F;
+    color: #FFF;
+}
+
 .hero {
     background: url("../images/hero-bg.svg"), linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
-    height: calc(100vh - 100px);
-    padding-top: 90px;
+    max-height: 615px;
+    padding: 90px 0 208px;
     position: relative;
     text-align: center;
 }
@@ -170,15 +238,46 @@ select {
     margin: 0 auto;
 }
 
+.hero__link {
+    display: block;
+    width: 52px;
+    height: 52px;
+    background-color: #FFF;
+    box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 222;
+}
+
+.hero__link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/icons/play-hero.svg");
+    width: 10px;
+    height: 11px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
 .hero__image-box {
     position: absolute;
-    left: 0;
     bottom: 0;
-    width: 100%;
+    right: 0;
+    left: 0;
+    height: 100%;
 }
 
 .hero__image {
     width: 100%;
+    height: 100%;
 }
 
 .customers {
@@ -227,6 +326,7 @@ select {
     font-weight: 500;
     line-height: 1.2;
     color: #3D4F9F;
+    font-family: "Quicksand";
     margin-bottom: 28px;
 }
 
@@ -239,25 +339,28 @@ select {
     font-weight: 400;
     line-height: 1.9;
     color: #3D4F9F;
+    font-family: "Roboto";
     margin-bottom: 47px;
     max-width: 387px;
     width: 100%;
     margin-bottom: 45px;
 }
 
-.manage__btn {
+.manage__link {
     font-size: 13px;
     font-weight: 700;
     line-height: 1.2;
     color: #FFF;
+    font-family: "Quicksand";
     background-color: #4C85FF;
     position: relative;
-    padding: 13px 0;
+    padding: 13px 25px;
     width: 130px;
     border-radius: 2px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.manage__btn::after {
+.manage__link::after {
     content: "";
     display: block;
     position: absolute;
@@ -269,18 +372,23 @@ select {
     width: 7px;
     height: 7px;
     right: 15px;
-    bottom: 15px;
+    bottom: 17px;
 }
 
-.manage__btn--transparent {
+.manage__link:hover {
+    background-color: #3D4F9F;
+    color: #FFF;
+}
+
+.manage__link--transparent {
     background-color: #F5F8FF;
     color: #ADB4D2;
     margin-left: -7px;
     border: 1px solid;
-    padding: 12px 0;
+    padding: 12px 25px;
 }
 
-.manage__btn--transparent::after {
+.manage__link--transparent::after {
     display: none;
 }
 
@@ -387,11 +495,11 @@ select {
     font-family: "Open Sans";
 }
 
-.about__buttons {
+.about__links {
     text-align: center;
 }
 
-.about__buttons span {
+.about__links span {
     font-size: 11px;
     font-weight: 600;
     line-height: 1.7;
@@ -401,7 +509,7 @@ select {
     margin: 0 47px;
 }
 
-.about__buttons span::before, .about__buttons span::after {
+.about__links span::before, .about__links span::after {
     content: "";
     display: block;
     position: absolute;
@@ -409,22 +517,23 @@ select {
     border: 1px solid #DAE4FE;
 }
 
-.about__buttons span::before {
+.about__links span::before {
     left: -35px;
     top: 7px;
 }
 
-.about__buttons span::after {
+.about__links span::after {
     left: 35px;
     top: 7px;
 }
 
-.about__btn {
+.about__link {
     font-family: "Quicksand";
     padding: 13px 15px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.about__btn--red {
+.about__link--red {
     font-size: 13px;
     font-weight: 700;
     line-height: 1.2;
@@ -432,12 +541,22 @@ select {
     background-color: #FFD7D7;
 }
 
-.about__btn--blue {
+.about__link--red:hover {
+    background-color: #D43F3F;
+    color: #FFD7D7;
+}
+
+.about__link--blue {
     font-size: 13px;
     font-weight: 700;
     line-height: 1.2;
     color: #3A79FF;
     background-color: #D2E1FF;
+}
+
+.about__link--blue:hover {
+    background-color: #3D4F9F;
+    color: #FFF;
 }
 
 .stats {
@@ -639,6 +758,7 @@ select {
     color: #3A79FF;
     font-family: "Quicksand";
     padding: 13px 15px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .blog__link--blue {
@@ -646,8 +766,17 @@ select {
     margin-right: 8px;
 }
 
+.blog__link--blue:hover {
+    background-color: #3D4F9F;
+    color: #FFF;
+}
+
 .blog__link--transparent {
     color: #A6B6DA;
+}
+
+.blog__link--transparent:hover {
+    color: #000;
 }
 
 .testimonials {
@@ -695,10 +824,13 @@ select {
     font-family: "Open Sans";
 }
 
+.testimonials__slider {
+    width: 441px;
+    height: 300px;
+}
+
 .testimonials__item {
     background-color: #FFF;
-    max-width: 441px;
-    width: 100%;
     padding: 40px 70px 50px;
     border: 1px solid #D8E3FE;
     box-shadow: 0px 5px 50px #F3F5FA;
@@ -715,7 +847,7 @@ select {
     background-image: url("../images/user-photo.png");
     width: 62px;
     height: 62px;
-    bottom: -30%;
+    bottom: -15%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -728,6 +860,49 @@ select {
     color: #676F95;
     font-family: "Roboto";
     letter-spacing: 0.03em;
+}
+
+.testimonials .slick-dots {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.testimonials .slick-dots li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.testimonials .slick-dots button {
+    background-color: transparent;
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.testimonials .slick-dots button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #D1D6E3;
+    border-radius: 50%;
+}
+
+.testimonials .slick-active button {
+    border-color: #3D4F9F;
+}
+
+.testimonials .slick-active button::before {
+    background-color: #3D4F9F;
 }
 
 .faq {
@@ -885,6 +1060,12 @@ select {
     color: #FFF;
     font-family: "Quicksand";
     padding: 13px 17px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.started__link:hover {
+    background-color: #3D4F9F;
+    color: #FFF;
 }
 
 .started__link--white {
@@ -948,6 +1129,11 @@ select {
     padding: 21px 0 21px 23px;
     width: 280px;
     margin-right: 14px;
+    transition: border 0.5s ease;
+}
+
+.newsteller__field:hover {
+    border: 1px solid #000;
 }
 
 .newsteller__btn {
@@ -960,6 +1146,11 @@ select {
     box-shadow: 0px 5px 15px rgba(116, 104, 255, 0.2);
     border-radius: 5px;
     padding: 21px 60px;
+    transition: background-color 0.5s ease;
+}
+
+.newsteller__btn:hover {
+    background-color: #3D4F9F;
 }
 
 .footer {
@@ -977,4 +1168,48 @@ select {
     letter-spacing: 0.05em;
     text-transform: capitalize;
     padding-left: 96px;
+}
+
+@media (max-width: 992px) {
+    .menu--active .menu__list {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .menu__list, .menu__link {
+        display: none;
+    }
+
+    .menu__list {
+        position: absolute;
+        background-color: #7792E0;
+        display: block;
+        text-align: center;
+        padding-top: 140px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        -webkit-transform: translateY(-300%);
+        transform: translateY(-300%);
+        transition: -webkit-transform 0.5s ease;
+        transition: transform 0.5s ease;
+        transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+        z-index: 444;
+    }
+
+    .menu__burger {
+        display: block;
+        z-index: 555;
+    }
+
+    .menu__list-item :hover {
+        border-bottom: 1px solid #FFF;
+    }
+
+    .menu__list-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }

@@ -17,6 +17,11 @@
  &__list-link {
   font-family: "Quicksand";
   font-weight: 500;
+  transition: color 0.5s ease, font-weight 0.5s ease;
+  &:hover {
+   color: $accentColor;
+   font-weight: 600;
+  }
  }
  &__social {
   display: flex;
@@ -33,11 +38,58 @@
    margin-right: 45px;
   }
  }
+ &__social-link {
+  path {
+   &:hover {
+    fill: $buttonColor;
+   }
+  }
+ }
+ &__burger {
+  display: none;
+  width: 26px;
+  height: 26px;
+  &--active .menu__line {
+   transition: transform 0.5s ease;
+   transform: rotate(45deg);
+  }
+  &--active .menu__line::before {
+   top: 0;
+   transform: rotate(90deg);
+  }
+  &--active .menu__line::after {
+   opacity: 0;
+  }
+ }
+ &__line {
+  display: block;
+  background-color: $accentColor;
+  width: 26px;
+  height: 2px;
+  position: relative;
+  &::before,
+  &:after {
+   @include pseudo;
+   position: absolute;
+   width: 26px;
+   height: 2px;
+   background-color: $accentColor;
+   left: 0;
+   top: 10px;
+  }
+  &:after {
+   top: -10px;
+  }
+ }
  &__link {
   @include text (13px, 700, 1.2, $buttonColor);
   font-family: "Quicksand";
   background-color: $buttonColorBg;
   padding: 13px 15px;
   border-radius: 2px;
+  &:hover {
+   background-color: $accentColor;
+   color: $primaryColor;
+  }
  }
 }

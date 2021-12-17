@@ -15,6 +15,7 @@
  }
  &__title {
   @include text (36px, 500, 1.2, $accentColor);
+  font-family: "Quicksand";
   margin-bottom: 28px;
   span {
    font-weight: 300;
@@ -22,18 +23,21 @@
  }
  &__text {
   @include text (15px, 400, 1.9, $accentColor);
+  font-family: "Roboto";
   margin-bottom: 47px;
   max-width: 387px;
   width: 100%;
   margin-bottom: 45px;
  }
- &__btn {
+ &__link {
   @include text (13px, 700, 1.2, $primaryColor);
+  font-family: "Quicksand";
   background-color: #4C85FF;
   position: relative;
-  padding: 13px 0;
+  padding: 13px 25px;
   width: 130px;
   border-radius: 2px;
+  transition: background-color 0.5s ease, color 0.5s ease;
   &::after {
    @include pseudo;
    @include background (url("../images/icons/play.svg"));
@@ -41,15 +45,19 @@
    width: 7px;
    height: 7px;
    right: 15px;
-   bottom: 15px;
+   bottom: 17px;
+  }
+  &:hover {
+   background-color: $accentColor;
+   color: $primaryColor;
   }
  }
- &__btn--transparent {
+ &__link--transparent {
   background-color: #F5F8FF;
   color: #ADB4D2;
   margin-left: -7px;
   border: 1px solid;
-  padding: 12px 0;
+  padding: 12px 25px;
   &::after {
    display: none;
   }

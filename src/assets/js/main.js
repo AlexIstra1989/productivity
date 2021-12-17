@@ -1,5 +1,5 @@
 $(document).ready(function() {
- $('.hero__inner').slick ({
+ $('.testimonials__wrap').slick ({
   dots: true,
   arrows: false,
   fade: true,
@@ -7,6 +7,16 @@ $(document).ready(function() {
   slidesToShow: 1,
   slidesToScroll: 1,
  });
+});
+
+$('.menu__burger').on('click', function () {
+ $('.menu').toggleClass('menu--active');
+ $('.menu__burger').toggleClass('menu__burger--active');
+});
+
+$('.menu__burger').click(function (event) {
+ event.preventDefault();
+ $('body').toggleClass('overflow');
 });
 
 var acc = document.getElementsByClassName("faq__accordion-btn");

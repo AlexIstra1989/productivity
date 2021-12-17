@@ -29,6 +29,11 @@
   @include text (13px, 700, 1.2, $primaryColor);
   font-family: "Quicksand";
   padding: 13px 17px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  &:hover {
+   background-color: $accentColor;
+   color: $primaryColor;
+  }
   &--white {
    background-color: $primaryColor;
    color: #565F82;

@@ -25,10 +25,12 @@
   @include text (12px, 600, 1.9, #A4ABC8);
   font-family: "Open Sans";
  }
+ &__slider {
+  width: 441px;
+  height: 300px;
+ }
  &__item {
   background-color: $primaryColor;
-  max-width: 441px;
-  width: 100%;
   padding: 40px 70px 50px;
   border: 1px solid #D8E3FE;
   box-shadow: 0px 5px 50px #F3F5FA;
@@ -38,7 +40,7 @@
    @include background (url("../images/user-photo.png"));
    width: 62px;
    height: 62px;
-   bottom: -30%;
+   bottom: -15%;
    left: 50%;
    transform: translate(-50%, -50%);
   }
@@ -47,5 +49,42 @@
   @include text (14px, 400, 1.7, #676F95);
   font-family: "Roboto";
   letter-spacing: 0.03em;
+ }
+
+ .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+   li {
+    &:not(:last-child) {
+     margin-right: 20px;
+   }
+  }
+  button {
+   background-color: transparent;
+   font-size: 0;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   position: relative;
+    &::before {
+     @include pseudo;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 8px;
+     height: 8px;
+     background-color: #D1D6E3;
+     border-radius: 50%;
+    }
+   }
+ }
+ .slick-active {
+  button {
+   border-color: $accentColor;
+   &::before {
+    background-color: $accentColor;
+   }
+  }
  }
 }

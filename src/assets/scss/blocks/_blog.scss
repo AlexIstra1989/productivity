@@ -91,13 +91,21 @@
   @include text (13px, 700, 1.2, $buttonColor);
   font-family: "Quicksand";
   padding: 13px 15px;
+  transition: background-color 0.5s ease, color 0.5s ease;
  }
  &__link--blue {
   background-color: $buttonColorBg;
   margin-right: 8px;
+  &:hover {
+   background-color: $accentColor;
+   color: $primaryColor;
+  }
  }
  &__link--transparent {
   color: #A6B6DA;
+  &:hover {
+   color: #000;
+  }
  } 
 
 

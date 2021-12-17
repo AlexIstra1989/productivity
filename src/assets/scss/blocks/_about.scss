@@ -45,7 +45,7 @@
   @include text (11px, 600, 1.7, $textColor);
   font-family: "Open Sans";
  }
- &__buttons {
+ &__links {
   text-align: center;
   span {
    @include text (11px, 600, 1.7, #ADB3CB);
@@ -68,16 +68,25 @@
    }
   }
  }
- &__btn {
+ &__link {
   font-family: "Quicksand";
   padding: 13px 15px;
+  transition: background-color 0.5s ease, color 0.5s ease;
  }
- &__btn--red {
+ &__link--red {
   @include text (13px, 700, 1.2, #D43F3F);
   background-color: #FFD7D7;
+  &:hover {
+   background-color: #D43F3F;
+   color: #FFD7D7;
+  }
  }
- &__btn--blue {
+ &__link--blue {
   @include text (13px, 700, 1.2, $buttonColor);
   background-color: $buttonColorBg;
+  &:hover {
+   background-color: $accentColor;
+   color: $primaryColor;
+  }
  }
 }
