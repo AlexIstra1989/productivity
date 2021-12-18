@@ -289,14 +289,14 @@ select {
     position: absolute; }
     .manage__image:nth-child(1) {
       top: 65px;
-      left: 5px;
+      left: 90px;
       z-index: 22; }
     .manage__image:nth-child(2) {
       top: -20px;
-      left: -65px; }
+      left: -20px; }
     .manage__image:nth-child(3) {
       top: 50px;
-      right: 15px; }
+      right: -15px; }
 
 .about {
   padding: 170px 0;
@@ -323,6 +323,8 @@ select {
   .about__inner {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 90px; }
   .about__item {
     max-width: 135px;
@@ -839,9 +841,15 @@ select {
     text-transform: capitalize;
     padding-left: 96px; }
 
+@media (max-width: 1200px) {
+  .manage__box {
+    padding-left: 0; } }
+
 @media (max-width: 992px) {
   .menu--active .menu__list {
     transform: translateY(0); }
+  .menu__inner {
+    justify-content: space-between; }
   .menu__list, .menu__link {
     display: none; }
   .menu__list {
@@ -865,7 +873,19 @@ select {
     border-bottom: 1px solid #FFF; }
   .menu__list-item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .menu__social-item:last-child {
+    margin-right: 0; }
+  .logo {
+    margin-right: 0; }
+  .manage {
+    padding: 100px 0; }
+    .manage__box {
+      margin: 0 auto; }
+    .manage__box-image {
+      display: none; }
+  .about {
+    padding: 100px 0; } }
 
 @media (max-width: 768px) {
   .hero__image-box {
@@ -873,7 +893,16 @@ select {
   .hero__title {
     font-size: 40px; }
   .hero__text {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .customers {
+    padding: 40px; }
+    .customers__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .customers__item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 30px; } }
 
 @media (max-width: 576px) {
   .menu__burger {
@@ -884,6 +913,8 @@ select {
   .hero__title {
     font-size: 35px; }
   .hero__text {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .manage {
+    padding: 40px 0; } }
 
 /*# sourceMappingURL=style.min.css.map */

@@ -71,16 +71,16 @@
   position: absolute;
   &:nth-child(1) {
    top: 65px;
-   left: 5px;
+   left: 90px;
    z-index: 22;
   }
   &:nth-child(2) {
    top: -20px;
-   left: -65px;
+   left: -20px;
   }
   &:nth-child(3) {
    top: 50px;
-   right: 15px;
+   right: -15px;
   }
  }
 }
