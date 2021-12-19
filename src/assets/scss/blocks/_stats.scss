@@ -2,29 +2,27 @@
  background-color: $primaryColor;
  &__inner {
   display: flex;
-  justify-content: space-between;
  }
- &__item--product {
-  background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+ &__item {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  padding: 155px 90px 75px 0;
   width: 100%; 
-  text-align: right;
- }
- &__item--users {
-  background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  padding: 155px 0 75px 90px;
-  text-align: left;
-  h2,
-  p {
-   color: #5E80FF;
-  }
+   &&--product  {
+    background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+    align-items: flex-end;
+    padding: 155px 90px 75px 0;
+    text-align: right;
+   }
+   &&--user {
+    background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+    align-items: flex-start;
+    padding: 155px 0 75px 90px;
+    text-align: left;
+    h2,
+    p {
+     color: #5E80FF;
+    }
+   }
  }
  &__result {
   @include text (28px, 400, 2.9, $primaryColor);

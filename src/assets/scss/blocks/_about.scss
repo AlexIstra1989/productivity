@@ -14,19 +14,24 @@
   text-align: center;
  }
  &__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   margin-bottom: 90px;
  }
+ &__items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  margin-left: -55px;
+  margin-bottom: -20px;
+ }
  &__item {
-  max-width: 135px;
+  display: flex;
+  flex-direction: column;
+  max-width: 140px;
   width: 100%;
   text-align: center;
-  &:not(:last-child) {
-   margin-right: 65px;
-  }
+  flex-basis: calc(25% - 55px);
+  margin-left: 65px;
+  margin-bottom: 20px;
  }
  &__image-box {
   display: flex;

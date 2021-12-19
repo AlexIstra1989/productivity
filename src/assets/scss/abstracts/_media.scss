@@ -69,6 +69,9 @@
 
  .about {
   padding: 100px 0;
+  &__title {
+   margin-bottom: 60px;
+  }
  }
 }
 
@@ -99,6 +102,31 @@
    }
   }
  }
+
+ .manage {
+  padding: 40px 0;
+  &__title {
+   font-size: 24px;
+  }
+ }
+
+ .about {
+  padding: 40px;
+  &__title {
+   margin-bottom: 40px;
+  }
+  &__item {
+   margin-left: 55px;
+   flex-basis: calc(40% - 55px);
+  }
+  &__image-box {
+   width: 49px;
+   height: 49px;
+  }
+ }
+
+ .stats {
+
 }
 
 @media (max-width: 576px) {
@@ -122,8 +150,20 @@
   }
  }
 
- .manage {
-  padding: 40px 0;
+ .about {
+  &__links {
+   display: flex;
+   flex-direction: column;
+    span {
+     margin: 10px 0;
+     &::before, 
+     &::after {
+      display: none;
+     }
+    }
+  }
  }
+
+
  
 }
