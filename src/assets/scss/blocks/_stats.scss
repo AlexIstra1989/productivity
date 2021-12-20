@@ -7,53 +7,56 @@
   display: flex;
   flex-direction: column;
   width: 100%; 
-   &&--product  {
-    background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
-    align-items: flex-end;
-    padding: 155px 90px 75px 0;
-    text-align: right;
+  &--product {
+   background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+   align-items: flex-end;
+   padding: 155px 90px 75px 0;
+   text-align: right;
+  }
+  &--users {
+   background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 100%;
+   padding: 155px 0 75px 90px;
+   text-align: left;
+   h2,
+   p {
+    color: #5E80FF;
    }
-   &&--user {
-    background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
-    align-items: flex-start;
-    padding: 155px 0 75px 90px;
-    text-align: left;
-    h2,
-    p {
-     color: #5E80FF;
-    }
-   }
+  }
  }
  &__result {
   @include text (28px, 400, 2.9, $primaryColor);
   font-family: "Quicksand";
   letter-spacing: 0.03em;
+  &--product {
+   position: relative;
+   &::before {
+    @include pseudo;
+    @include background (url("../images/icons/product.svg"));
+    width: 65px;
+    height: 65px;
+    left: 0;
+    bottom: 75px;
+   }
+  }
+  &--users {
+   position: relative;
+   &::before {
+    @include pseudo;
+    @include background (url("../images/icons/users.svg"));
+    width: 71px;
+    height: 60px;
+    left: 0;
+    bottom: 80px;
+   }
+  }
  }
  &__text {
   @include text (18px, 500, 1.2, $primaryColor);
   font-family: "Quicksand";
   max-width: 232px;
- }
- &__result--product {
-  position: relative;
-  &::before {
-   @include pseudo;
-   @include background (url("../images/icons/product.svg"));
-   width: 65px;
-   height: 65px;
-   left: 0;
-   bottom: 75px;
-  }
- }
- &__result--users {
-  position: relative;
-  &::before {
-   @include pseudo;
-   @include background (url("../images/icons/users.svg"));
-   width: 71px;
-   height: 60px;
-   left: 0;
-   bottom: 80px;
-  }
- }
+ } 
 }

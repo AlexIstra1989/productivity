@@ -126,7 +126,15 @@
  }
 
  .stats {
-
+  &__item {
+   &--product {
+    padding: 100px 70px 60px 0;
+   }
+   &--users {
+    padding: 100px 0 60px 70px;
+   }
+  }
+ }
 }
 
 @media (max-width: 576px) {
@@ -161,9 +169,37 @@
       display: none;
      }
     }
+   }
+  }
+ .stats {
+  &__inner {
+   display: block;
+  }
+  &__item {
+   align-items: center;
+   text-align: center;
+   &--product,
+   &--users {
+    padding: 100px 0 30px;
+   }
+  }
+  &__result {
+   font-size: 20px;
+   &--product {
+    &::before {
+     width: 50px;
+     height: 50px;
+    }
+   }
+   &--users {
+    &::before {
+     width: 56px;
+     height: 47px;
+    }
+   }
+  }
+  &__text {
+   font-size: 14px;
   }
  }
-
-
- 
 }
