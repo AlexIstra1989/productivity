@@ -44,8 +44,8 @@
                 appendDots: $(element),
                 arrows: true,
                 asNavFor: null,
-                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"></button>',
-                nextArrow: '<button class="slick-next" aria-label="Next" type="button"></button>',
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><img src="assets/images/arrow-left.svg" alt="#"></button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button"><img src="assets/images/arrow-right.svg" alt="#"></button>',
                 autoplay: false,
                 autoplaySpeed: 3000,
                 centerMode: false,
@@ -3033,6 +3033,18 @@ $(document).ready(function() {
   slidesToScroll: 1,
  });
 });
+
+$(document).ready(function() {
+ $('.blog__slider').slick ({
+  dots: false,
+  arrows: true,
+  fade: true,
+  autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+ });
+});
+
 
 $('.menu__burger').on('click', function () {
  $('.menu').toggleClass('menu--active');

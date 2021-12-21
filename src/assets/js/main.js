@@ -9,6 +9,18 @@ $(document).ready(function() {
  });
 });
 
+$(document).ready(function() {
+ $('.blog__slider').slick ({
+  dots: false,
+  arrows: true,
+  fade: true,
+  autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+ });
+});
+
+
 $('.menu__burger').on('click', function () {
  $('.menu').toggleClass('menu--active');
  $('.menu__burger').toggleClass('menu__burger--active');
