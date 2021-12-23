@@ -26,7 +26,8 @@
   font-family: "Open Sans";
  }
  &__slider {
-  width: 441px;
+  max-width: 441px;
+  width: 100%;
   height: 300px;
  }
  &__item {

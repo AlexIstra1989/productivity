@@ -17,6 +17,15 @@ $(document).ready(function() {
   autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  responsive: [
+   {
+     breakpoint: 769,
+     settings: {
+       slidesToScroll: 1,
+       slidesToShow: 1
+     }
+   }
+ ]
  });
 });
 

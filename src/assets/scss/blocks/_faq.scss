@@ -30,6 +30,7 @@
   letter-spacing: 0.03em;
   position: relative; 
   transition: color 0.2s ease, font-weight 0.2s ease;
+  text-align: inherit;
   &::before {
    @include pseudo;
    @include background (url("../images/icons/faq-vector.svg"));
