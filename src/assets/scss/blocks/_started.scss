@@ -17,7 +17,7 @@
    }
  }
  &__text {
-  @include text (15px, 400, 1.9, $primaryColor);
+  @include text (14px, 400, 1.9, $primaryColor);
   font-family: "Roboto";
   letter-spacing: 0.03em;
   margin: 0 auto 28px;

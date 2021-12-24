@@ -102,6 +102,12 @@
    font-size: 30px;
   }
  }
+
+ .started {
+  &__title {
+   font-size: 40px;
+  }
+ }
 }
 
 @media (max-width: 768px) {
@@ -178,6 +184,23 @@
   &__box {
    margin-right: 0;
    margin-bottom: 25px;
+  }
+ }
+
+ .faq {
+  padding: 40px 0;
+  &__accordion-btn {
+   font-size: 14px;
+  }
+ }
+
+ .started {
+  padding: 40px 0;
+  &__subtitle {
+   font-size: 10px;
+  }
+  &__title {
+   font-size: 30px;
   }
  }
 }
@@ -271,6 +294,12 @@
     left: 85%;
     top: 80%;
    }
+  }
+ }
+
+ .started {
+  &__link {
+   display: inline-block;
   }
  }
 }
