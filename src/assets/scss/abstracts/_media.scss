@@ -108,6 +108,17 @@
    font-size: 40px;
   }
  }
+
+ .newsteller {
+  &__inner {
+   flex-direction: column;
+  }
+  &__box {
+   margin-right: 0;
+   margin-bottom: 25px;
+   text-align: center;
+  }
+ }
 }
 
 @media (max-width: 768px) {
@@ -202,6 +213,10 @@
   &__title {
    font-size: 30px;
   }
+ }
+
+ .newsteller {
+  padding: 40px 0;
  }
 }
 
@@ -299,7 +314,21 @@
 
  .started {
   &__link {
-   display: inline-block;
+   display: block;
+   &:not(:last-child) {
+    margin-bottom: 20px;
+   }
+  }
+ }
+
+ .newsteller {
+  &__label {
+   display: flex;
+   flex-direction: column;
+  }
+  &__field {
+   margin-bottom: 25px;
+   margin-right: 0; 
   }
  }
 }
