@@ -4,6 +4,12 @@
    padding-left: 0;
   }
  }
+
+ .footer {
+  &__menu-inner {
+   flex-direction: column;
+  }
+ }
 }
 
 @media (max-width: 992px) {
@@ -116,6 +122,17 @@
   &__box {
    margin-right: 0;
    margin-bottom: 25px;
+   text-align: center;
+  }
+ }
+
+ .footer {
+  padding: 40px 0;
+  &__social {
+   margin: 0 auto;
+  }
+  &__copyright {
+   padding-left: 0;
    text-align: center;
   }
  }
